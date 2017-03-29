@@ -9,3 +9,9 @@
       [(ngModel)]="searchStr" name="searchStr" (keyup)="searchMusic()">
   </div>
 </form>
+
+<div *ngIf="searchRes">
+  <div *ngFor="let res of searchRes">
+    {{res.name}}
+  </div>
+</div>
