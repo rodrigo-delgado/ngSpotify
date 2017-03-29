@@ -10,8 +10,7 @@ export class SpotifyService {
   constructor(private _http: Http) {
   }
   searchMusic(str: string, type = 'artist') {
-    this.searchUrl = 'http://api.spotify.com/v1/search?query=' + str +
-    '&offset=0limit=20&type=' + type + '&market=US';
+    this.searchUrl = 'https://api.spotify.com/v1/search?query='+str+'&offset=0&limit=20&type='+type+'&market=US';
 
     return this._http.get(this.searchUrl)
     .map(res => res.json());
